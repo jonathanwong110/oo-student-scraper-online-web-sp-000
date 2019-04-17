@@ -26,14 +26,14 @@ class Scraper
     container.each do |link|
       if link.include?("twitter")
         student[:twitter] = link
+      elsif link.include?("bio")
+        student[:bio] = link
       elsif link.include?("linkedin")
         student[:linkedin] = link
       elsif link.include?("github")
         student[:github] = link
       elsif link.include?("profile_quote")
         student[:profile_quote] = link
-      elsif link.include?("bio")
-        student[:bio] = link
       else link.include?("blog")
         student[:blog] = link
       end
