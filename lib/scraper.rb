@@ -35,7 +35,7 @@ class Scraper
       elsif link.include?("bio")
         student[:bio] = link
       else link.include?("blog")
-        student[:blog] = blog
+        student[:blog] = link
       end
     end
     student[:profile_quote] = doc.css(".profile-quote").text
